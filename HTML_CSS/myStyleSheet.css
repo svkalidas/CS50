@@ -1,0 +1,39 @@
+body {
+    background-color: gray;
+}
+div {
+    padding: 20px;
+}
+h1 {
+    color: red;
+    text-align: center;
+}
+h2,h3{
+    color: blue;
+}
+
+table {
+ border: 2px solid black;
+ border-collapse: collapse;
+}
+
+tr,th,td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+div ul li {
+    color: blue;
+}
+
+a[href="https://www.facebook.com/"] {
+    color: red;
+}
+
+button{
+    background: yellow 2px;
+}
+
+button:hover{
+    background-color: green;
+}
