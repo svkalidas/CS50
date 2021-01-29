@@ -16,19 +16,21 @@ print(names[0])
 
 names.sort()
 
-print(names)
+print(f"Lists : {names}")
 
 #Set : not an ordered sequence, Duplicates are not allowed
-cities = set()
+cities = set("Trivandrum")
 
 cities.add("new delhi")
 cities.add("Bombay")
 cities.add("Bangalore")
 cities.add("Chennai")
 
-print(cities)
+print(f"set values : {cities} ")
 
 cities.remove("Chennai")
+
+print(f" set after removing chennai : {cities}")
 
 len(cities)
 
