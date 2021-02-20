@@ -1,0 +1,10 @@
+{% extends "tasks/welcomeToTask.html" %}
+
+{% block body %}
+
+    <form action="{% url 'task:add' %}" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Add">
+    </form>
+{% endblock %}

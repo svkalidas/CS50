@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Task Manager</title>
+        <style>
+
+            div{
+                align-items: center;
+                text-align: center;
+                text-shadow: cadetblue;
+                size: 120px;
+                color: blue;
+            }
+            body{
+                background-color: burlywood;
+            }
+
+            .list {
+                list-style: circle;
+                list-style-type: disc;
+                list-style-position: inside;
+            }
+        </style>
+    </head>
+    <body>
+        <div>!Welcome to Task Maanager!</div>   
+       <div>
+           <a href="{% url 'task:add' %}">Add a task,</a>
+           <a href="{% url 'task:clear  ' %}">Clear Task</a>
+        </div>
+       <div>
+        {% block body %}
+        {% endblock %}
+       </div>
+
+        {% if tasks %}
+            <div>Tasks</div>
+            <div>
+                <ol class="list">
+                    {% for task in tasks %}
+                        <li>{{task}}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        {% endif %}
+      
+    </body>
+</html>
